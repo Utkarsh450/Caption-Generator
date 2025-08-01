@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const userModel = require("../models/user.models");
 const authMiddlware = require("../middlewares/auth.middlewares");
 const multer = require("multer");
+const { createPostController } = require("../controllers/post.controller");
 
 const upload = multer({ storage: multer.memoryStorage() });
 
