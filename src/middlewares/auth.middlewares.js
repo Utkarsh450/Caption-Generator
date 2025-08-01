@@ -2,7 +2,7 @@ const express = require("express");
 const userModel = require("../models/user.models");
 const jwt = require("jsonwebtoken");
 
-async function authMiddlware(req, res, nexy) {
+async function authMiddlware(req, res, next) {
   const token = req.cookies.token;
   if (!token) {
     return res.status(401).json({ message: "Unauthorized" });
